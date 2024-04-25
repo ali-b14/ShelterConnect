@@ -14,7 +14,7 @@ public class Shelter {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Shelter")
     private Integer shelter_ID;
-    @Column(name = "Last Name", nullable = false)
+    @Column(name = "Name", nullable = false)
     private String name;
     @Column(name = "Address", nullable = false)
     private String address;
