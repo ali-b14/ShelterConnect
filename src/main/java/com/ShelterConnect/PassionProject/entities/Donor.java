@@ -1,25 +1,21 @@
-package com.ShelterConnect.PassionProject.model;
+package com.ShelterConnect.PassionProject.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 
 @Entity
 public class Donor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Donor ID")
+    @Column(name = "Donor_ID")
     private Integer donor_ID;
-    @Column(name = "First Name", nullable = false)
+    @Column(name = "First_Name", nullable = false)
     private String first_Name;
-    @Column(name = "Last Name", nullable = false)
+    @Column(name = "Last_Name", nullable = false)
     private String last_Name;
     @Column(name = "Organization")
     private String organization;
-    @Column(name = "Email Address", nullable = false, unique = true)
+    @Column(name = "Email_Address", nullable = false, unique = true)
     private String email_address;
 
     public Donor() {

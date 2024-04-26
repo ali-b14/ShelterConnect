@@ -1,4 +1,4 @@
-package com.ShelterConnect.PassionProject.model;
+package com.ShelterConnect.PassionProject.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -13,13 +13,13 @@ import java.util.Date;
 public class Recipient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Recipient ID")
+    @Column(name = "Recipient_ID")
     private Integer recipient_ID;
-    @Column(name = "First Name", nullable = false)
+    @Column(name = "First_Name", nullable = false)
     private String first_Name;
-    @Column(name = "Last Name", nullable = false)
+    @Column(name = "Last_Name", nullable = false)
     private String last_Name;
-    @Column(name = "Birth Date", nullable = false)
+    @Column(name = "Birth_Date", nullable = false)
     private Date birth_Date;
 
     public Recipient(String first_Name, String last_Name, Date birth_Date) {

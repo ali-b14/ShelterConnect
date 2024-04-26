@@ -1,8 +1,8 @@
-package com.ShelterConnect.PassionProject.model;
+package com.ShelterConnect.PassionProject.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.aot.generate.Generated;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -20,15 +20,15 @@ public class Shelter {
     private String address;
     @Column(name = "Website")
     private String website;
-    @Column(name = "Phone Number", nullable = false)
+    @Column(name = "Phone_Number", nullable = false)
     private String phone_Number;
-    @Column(name = "Bed Availability", nullable = false)
+    @Column(name = "Bed_Availability", nullable = false)
     private Integer bed_Availability;
-    @Column(name = "Food Availability", nullable = false)
+    @Column(name = "Food_Availability", nullable = false)
     private String food_Availability;
-    @Column(name = "Inventory Status", nullable = false)
+    @Column(name = "Inventory_Status", nullable = false)
     private String inventory_Status;
-    @Column(name = "Email Address", nullable = false, unique = true)
+    @Column(name = "Email_Address", nullable = false, unique = true)
     private String email_Address;
 
     public Shelter(String name, String address, String website, String phone_Number, Integer bed_Availability, String food_Availability, String inventory_Status, String email_Address) {

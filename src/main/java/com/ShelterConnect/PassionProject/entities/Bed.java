@@ -1,4 +1,4 @@
-package com.ShelterConnect.PassionProject.model;
+package com.ShelterConnect.PassionProject.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -12,7 +12,7 @@ import lombok.*;
 public class Bed {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Bed ID")
+    @Column(name = "Bed_ID")
     private Integer bed_ID;
     @Column(name = "Name", nullable = false)
     private String name;
