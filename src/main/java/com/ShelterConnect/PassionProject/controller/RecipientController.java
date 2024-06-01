@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 //Rest controller is a convenient annotation that combines @Controller and @ResponseBody, which eliminates the need to annotate every request handling method of the controller class with the @ResponseBody annotation
 @RestController
-@RequestMapping("/api/recipients")
 public class RecipientController {
     //inject dependency RecipientService
     private RecipientService recipientService;
@@ -23,7 +22,7 @@ public class RecipientController {
     //build create recipient REST API
     // @PostMapping handles post http requests.
     //@RequestBody annotation allows us to retrieve the request's body and automatically convert it to Java object.
-    @PostMapping()
+    @PostMapping("/recipients")
     public ResponseEntity<Recipient> saveRecipient(@RequestBody Recipient recipient){
         return new ResponseEntity<Recipient>(recipientService.saveRecipient(recipient), HttpStatus.CREATED);
     }
