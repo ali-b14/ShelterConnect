@@ -32,5 +32,10 @@ public class RecipientController {
         return getAllRecipients();
     }
 
+    @GetMapping("/hello")
+    public String greeting(){
+        return "hello";
+    }
+
 
 }
