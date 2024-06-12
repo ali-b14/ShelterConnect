@@ -2,7 +2,7 @@ package com.ShelterConnect.PassionProject.entities;
 
 import jakarta.persistence.*;
 
-
+//This class has manual constructors, toString, and getters and setters the other classes use lombok annotations for shortcut
 @Entity
 public class Donor {
     @Id

@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Configuration;
 
 import java.sql.SQLOutput;
 
-//@SpringBootApplication
-@ComponentScan
-@Configuration
-@AutoConfiguration
+@SpringBootApplication
+//@ComponentScan
+//@Configuration
+//@AutoConfiguration
 public class ShelterConnectApplication {
 
 	public static void main(String[] args) {

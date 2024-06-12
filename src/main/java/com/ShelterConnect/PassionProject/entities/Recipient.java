@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+//This all gets packaged in @Data when using lombok dependency
 @Getter
 @Setter
 @NoArgsConstructor
@@ -27,4 +28,5 @@ public class Recipient {
         this.last_Name = last_Name;
         this.birth_Date = birth_Date;
     }
+
 }
