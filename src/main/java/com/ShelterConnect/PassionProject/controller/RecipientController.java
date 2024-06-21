@@ -32,14 +32,17 @@ public class RecipientController {
         return getAllRecipients();
     }
 
-    @PutMapping("/hello")
-    public String greeting(){
-        return "hello";
+    @PutMapping("update/{id}")
+    public ResponseEntity<Recipient> updateRecipient(@PathVariable long id, @RequestBody Recipient recipient){
+        Recipient updatedRecipient = recipientService.updateRecipient(id, recipient);
+        return new ResponseEntity<Recipient>(updatedRecipient, HttpStatus.OK);
     }
 
-
-
-
+    @DeleteMapping("/delete")
+    public ResponseEntity<String> deleteRecipient(@RequestParam long id){
+        recipientService.deleteRecipient(id);
+        return new ResponseEntity<String>("Deleted successfully", HttpStatus.OK);
+        }
 
 
 }
