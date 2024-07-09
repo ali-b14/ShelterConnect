@@ -1,4 +1,4 @@
 package com.ShelterConnect.PassionProject.repository;
 
-public interface DonorRepository {
+public interface DonorRepository extends JpaRepository<Donor, Integer> {
 }
